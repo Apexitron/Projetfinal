@@ -1,0 +1,20 @@
+Sélectionner les users qui jouent à LoL sur PC:
+
+SELECT u.pseudo_user 
+FROM user u, videogame v, play pl, belong b, platform p
+WHERE u.id_user = pl.id_user
+AND pl.id_videogame = v.id_videogame
+AND v.id_videogame = b.id_videogame
+AND b.id_platform = p.id_platform
+AND v.name_videogame = "League of Legends";
+
+User qui jouent à CoD sur PS4 :
+
+SELECT u.pseudo_user, u.name_user 
+FROM user u, videogame v, play pl, belong b, platform p
+WHERE u.id_user = pl.id_user
+AND pl.id_videogame = v.id_videogame
+AND v.id_videogame = b.id_videogame
+AND b.id_platform = p.id_platform
+AND v.name_videogame = "CoD"
+AND p.name_platform = "PS4"
