@@ -1,6 +1,10 @@
 <?php
-session_start();
+if(!isset($_SESSION)) 
+{ 
+    session_start(); 
+} 
 ini_set('display_errors', 1);
+ include 'fonctions.php';
 ?>
 <!DOCTYPE html>
  <html>
@@ -30,7 +34,10 @@ ini_set('display_errors', 1);
             <div class="col-sm-12 reste">
                   <!-- ajouter fonction pour changer la src selon l'utilisateur  -->
                   <div class="col-sm-12 text-center "><img class="logoprof mx-auto" src="https://iutv.univ-paris13.fr/wp-content/uploads/logo-rond-twitter.png"></img></div>
-                  <div class="col-sm-6 col-lg-8 text-center mx-auto name"><h1>USER NAME</h1></div>
+                  <div class="col-sm-6 col-lg-8 text-center mx-auto name"><h1>
+                  <?php profName(); var_dump($_SESSION); ?>
+                        </h1>
+                        </div>
                   <div class="col-sm-6 col-lg-8 text-center mx-auto bio"><p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae nisl posuere, fermentum lacus et, aliquam libero.
                     Morbi nisl diam, tincidunt a ipsum id, consequat sodales neque. Duis pellentesque neque sit amet leo luctus fringilla. Donec a nisi aliquet, pharetra ante ac, tincidunt sem.
                       Nunc vulputate ligula purus, quis faucibus dolor ultrices non. Aliquam ut fringilla tortor. Maecenas eu lacus sem. </p></div>

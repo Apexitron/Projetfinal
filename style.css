@@ -281,6 +281,7 @@ section{
 {
     top: 50vh;
     z-index: 5;
+    padding: 15px;
     position: absolute;
     background: #042331;
     border-radius: 3px;
@@ -307,10 +308,13 @@ section{
 {
   top: 35vh;
   z-index: 4; 
-  left: -350px;
+  left: -400px;
   position: fixed;
   color: white;
   transition: all .5s;
+  background-color:#4266f5;
+  padding: 35px;
+  border-radius: 25px;
 }
 
 /* #filters ul

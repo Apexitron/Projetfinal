@@ -19,7 +19,7 @@ function closeFilters()
     let menu=document.getElementById("filters");
     let opbtn=document.getElementById("opfilter");
     let clbtn=document.getElementById("clfilter");
-    menu.style.left="-350px";
+    menu.style.left="-400px";
     opbtn.style.display="block";
     clbtn.style.left="-95px";
     

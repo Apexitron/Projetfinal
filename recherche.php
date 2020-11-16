@@ -1,5 +1,8 @@
 <?php
-session_start();
+if(!isset($_SESSION)) 
+{ 
+	session_start(); 
+} 
 ini_set('display_errors', 1);
 ?>
 <!DOCTYPE html>
@@ -25,19 +28,22 @@ ini_set('display_errors', 1);
 			<i class="fas fa-bars" id="opfilter" onclick=openFilters()></i>
 			<i class="fas fa-times" id="clfilter" onclick= closeFilters()></i>
 				<div id="filters">
-					<ul>
-						<h4>Plateforme :</h4>
-						<li><input type="checkbox" name="ps4" id="ps4"><label for="ps4">Playstation 4</label></li>
-						<li><input type="checkbox" name="xbox" id="xbox"><label for="xbox">Xbox</label></li>
-						<li><input type="checkbox" name="switch" id="switch"><label for="switch">Nintendo Switch</label></li>
-						<li><input type="checkbox" name="pc" id="pc"><label for="pc">PC</label></li>
-						<h4>Jeu :</h4>
-						<li><input type="checkbox" name="lol" id="lol"><label for="lol">League of Legends</label></li>
-						<li><input type="checkbox" name="cod" id="cod"><label for="cod">Call of Duty : INSERER NOM DE JEU</label></li>
-						<li><input type="checkbox" name="rl" id="rl"><label for="rl">Rocket League</label></li>
-						<li><input type="checkbox" name="ssbm" id="ssbm"><label for="ssbm">Super Smash Bros Melee</label></li>
-
-					</ul>	
+					
+					<h4>Plateforme :</h4>
+						<select name="plateforme" id="plateforme">						
+						<option value="ps4" name="ps4" id="ps4"><label for="ps4">Playstation 4</label>
+						<option value="xbox" name="xbox" id="xbox"><label for="xbox">Xbox</label>
+						<option value="switch" name="switch" id="switch"><label for="switch">Nintendo Switch</label>
+						<option value="pc" name="pc" id="pc"><label for="pc">PC</label>
+						</select>	
+							<h4>Jeu :</h4>
+						<select  name="jeu" id="jeu">	
+							<option value="lol" name="lol" id="lol"><label for="lol">League of Legends</label>
+							<option value="cod" name="cod" id="cod"><label for="cod">Call of Duty : INSERER NOM DE JEU</label>
+							<option value="rl" name="rl" id="rl"><label for="rl">Rocket League</label>
+							<option value="ssbm" name="ssbm" id="ssbm"><label for="ssbm">Super Smash Bros Melee</label>
+						</select>
+						
 				</div>	
 		
 			<div class="container-fluid reste">
