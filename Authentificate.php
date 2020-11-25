@@ -1,8 +1,5 @@
 <?php
-if(!isset($_SESSION)) 
-{ 
-    session_start(); 
-} 
+
 require "Pdo_connexion.php";
 class Authentificate extends Pdo_connexion{
     public function __construct($login, $password)
@@ -13,7 +10,7 @@ class Authentificate extends Pdo_connexion{
         $this->TestUser($login, $password); 
     }
 
-    public function setSession()
+    private function setSession()
     {
         $_SESSION["session"]=session_id();
         $_SESSION["id_user"]=$this->User["id_user"];
@@ -28,9 +25,9 @@ class Authentificate extends Pdo_connexion{
         $REQ="select id_user from user where pseudo_user=:login and password_user=:mdp";
         $RES= $this->CNX->prepare($REQ);
         $RES->execute(array(":login"=>$login, ":mdp"=>$password));
-        if(!empty($RES)&&$RES->rowCount()==1){
+        if(!empty($RES)&&$RES->rowCount()==1&&$RES->rowCount()!=1){
             $id=$RES->fetch();
-            $this->Identification($id["id_user"]);
+            $this->Identification($id["id_user"], $id[""]);
         }
     }
 
@@ -41,6 +38,11 @@ class Authentificate extends Pdo_connexion{
         $RES->execute(array(":id"=>$id));
         $this->User = $RES->fetch();
         $this->setSession();
+        if(!isset($_SESSION)) 
+        { 
+            session_start(); 
+        } 
+        header('Location: profile.php');
     }
 
    

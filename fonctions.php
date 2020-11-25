@@ -56,4 +56,8 @@ require 'Authentificate.php';
 		}
 	}
 
+	function Recherche()
+	{
+
+	}
 ?>

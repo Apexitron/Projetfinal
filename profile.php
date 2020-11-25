@@ -35,7 +35,7 @@ ini_set('display_errors', 1);
                   <!-- ajouter fonction pour changer la src selon l'utilisateur  -->
                   <div class="col-sm-12 text-center "><img class="logoprof mx-auto" src="https://iutv.univ-paris13.fr/wp-content/uploads/logo-rond-twitter.png"></img></div>
                   <div class="col-sm-6 col-lg-8 text-center mx-auto name"><h1>
-                  <?php profName(); var_dump($_SESSION); ?>
+                  <?php profName();?>
                         </h1>
                         </div>
                   <div class="col-sm-6 col-lg-8 text-center mx-auto bio"><p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae nisl posuere, fermentum lacus et, aliquam libero.

@@ -1,6 +1,4 @@
 <?php
-
-use Authentificate;
 session_start();
 ini_set('display_errors', 1);
 require "Authentificate.php";
@@ -70,7 +68,6 @@ require "Authentificate.php";
  <?php if(isset($_POST["login"], $_POST["password"]))
  		{
 			 new Authentificate($_POST["login"], $_POST["password"]);
-			 header('Location: profile.php');
   			exit();	
 		}
 ?>
