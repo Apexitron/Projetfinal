@@ -5,7 +5,14 @@ if(!isset($_SESSION))
 } 
 ini_set('display_errors', 1);
  include 'fonctions.php';
-?>
+/*  include 'Authentificate.php';
+ */
+ if (!isset($_SESSION["session"]))
+ {
+      echo "Vous devez être connecté.e pour accéder à cette page";
+      header('refresh:1;url=index.php');
+      exit();
+ }?>
 <!DOCTYPE html>
  <html>
 	<head>
@@ -35,7 +42,7 @@ ini_set('display_errors', 1);
                   <!-- ajouter fonction pour changer la src selon l'utilisateur  -->
                   <div class="col-sm-12 text-center "><img class="logoprof mx-auto" src="https://iutv.univ-paris13.fr/wp-content/uploads/logo-rond-twitter.png"></img></div>
                   <div class="col-sm-6 col-lg-8 text-center mx-auto name"><h1>
-                  <?php profName();?>
+                  <?php profName(); var_dump($_SESSION)?>
                         </h1>
                         </div>
                   <div class="col-sm-6 col-lg-8 text-center mx-auto bio"><p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae nisl posuere, fermentum lacus et, aliquam libero.

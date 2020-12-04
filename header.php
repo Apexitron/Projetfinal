@@ -11,11 +11,7 @@
 <li><a href="#"><i class="fas fa-stream"></i>Overview</a></li>
 <li><a href="#"><i class="fas fa-calendar-week"></i>Events</a></li>
 <li><a href="#"><i class="far fa-question-circle"></i>About</a></li>
-<li><form method="POST" id="myform"><a href="" onclick="document.getElementById('myform').submit()"><i class="fas fa-times"></i>Déconnexion</a></form></li>
+<li><a href="logout.php"><i class="fas fa-times"></i>Déconnexion</a></form></li>
 <li><a href="#"><i class="far fa-envelope"></i>Contact</a></li>
 </ul>
 </div>
-<?php if (isset($_POST['submit']))
-{
-  Deconnexion();
-}?>

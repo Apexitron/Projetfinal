@@ -25,9 +25,12 @@ class Authentificate extends Pdo_connexion{
         $REQ="select id_user from user where pseudo_user=:login and password_user=:mdp";
         $RES= $this->CNX->prepare($REQ);
         $RES->execute(array(":login"=>$login, ":mdp"=>$password));
-        if(!empty($RES)&&$RES->rowCount()==1&&$RES->rowCount()!=1){
+        if(!empty($RES)&&$RES->rowCount()==1){
             $id=$RES->fetch();
             $this->Identification($id["id_user"], $id[""]);
+        }
+        else{
+            echo "<div class='col-7 mx-auto text-center font-weight-bold mt-1'>Nom d'utilisateur ou mot de passe incorrect</div>";
         }
     }
 
@@ -44,6 +47,23 @@ class Authentificate extends Pdo_connexion{
         } 
         header('Location: profile.php');
     }
+
+    private function Deconnexion()
+	{
+	$_SESSION = array();
+
+	// Si vous voulez détruire complètement la session, effacez également le cookie de session.
+	// Note : cela détruira la session et pas seulement les données de session !
+	if (ini_get("session.use_cookies")):
+    $params = session_get_cookie_params();
+    setcookie(session_name(), '', time() - 42000,
+        $params["path"], $params["domain"],
+        $params["secure"], $params["httponly"]
+    );
+	endif;
+	session_destroy();
+	header('refresh:2;url=index.php');
+	}
 
    
 }
