@@ -3,8 +3,11 @@
   padding: 0;
 }
 
+
+
 body{
-  margin-top: -25px;
+  margin-top: -35px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .logo{
@@ -174,8 +177,8 @@ body {
   position: fixed;
   left: -250px;
   width: 250px;
-  height: 45vh;
-  background: #042331;
+/*   height: 45vh;
+ */  background: #042331;
   transition: all .5s ease;
   z-index: 3;
   top: 100px;
@@ -265,8 +268,14 @@ section{
 }
 
 .reste{
-  height: 100vh;
+  height: 100%;
   background-color: #343634;
+}
+
+.profname{
+  font-size: 32px;
+  font-weight: bold;
+  font-family: 'Russo One', sans-serif;
 }
 
 
@@ -300,7 +309,8 @@ section{
   position: fixed;
   background: #042331;
   color: white;
-  transition: all .5s;
+  transition: all .4s;
+  cursor: pointer;
 
 }
 

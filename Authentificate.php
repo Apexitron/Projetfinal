@@ -62,7 +62,7 @@ class Authentificate extends Pdo_connexion{
     );
 	endif;
 	session_destroy();
-	header('refresh:2;url=index.php');
+	header('refresh:0.5;url=index.php');
 	}
 
    

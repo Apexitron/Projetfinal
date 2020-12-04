@@ -9,9 +9,7 @@ ini_set('display_errors', 1);
  */
  if (!isset($_SESSION["session"]))
  {
-      echo "Vous devez être connecté.e pour accéder à cette page";
-      header('refresh:1;url=index.php');
-      exit();
+      forbidden();
  }?>
 <!DOCTYPE html>
  <html>
@@ -25,6 +23,8 @@ ini_set('display_errors', 1);
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="script.js"></script>
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <style>@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');</style>
+        <style>@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');</style>
 	</head>
 	<body>
     <input type="checkbox" id="check">
@@ -41,8 +41,8 @@ ini_set('display_errors', 1);
             <div class="col-sm-12 reste">
                   <!-- ajouter fonction pour changer la src selon l'utilisateur  -->
                   <div class="col-sm-12 text-center "><img class="logoprof mx-auto" src="https://iutv.univ-paris13.fr/wp-content/uploads/logo-rond-twitter.png"></img></div>
-                  <div class="col-sm-6 col-lg-8 text-center mx-auto name"><h1>
-                  <?php profName(); var_dump($_SESSION)?>
+                  <div class="col-sm-6 col-lg-8 text-center mx-auto name"><h1 class="profname">
+                  <?php profName(); /* var_dump($_SESSION) */?>
                         </h1>
                         </div>
                   <div class="col-sm-6 col-lg-8 text-center mx-auto bio"><p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae nisl posuere, fermentum lacus et, aliquam libero.

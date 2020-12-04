@@ -30,6 +30,12 @@ require 'Authentificate.php';
 		echo'</select></div>';
 	} */
 	
+	function forbidden()
+	{
+	  echo "Vous devez être connecté.e pour accéder à cette page";
+      header('refresh:1;url=index.php');
+      exit();
+	}
 
 	function profName()
 	{
