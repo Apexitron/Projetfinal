@@ -4,8 +4,9 @@
 }
 
 
+/* ----------------------------- Style de la page de profil */
 
-body{
+.bodyprof{
   margin-top: -35px;
   font-family: 'Roboto', sans-serif;
 }
@@ -299,6 +300,7 @@ section{
     left: 35px;
     font-size: 35px;
     cursor: pointer;
+    transition: all .4s;
   }
 
 #clfilter
@@ -327,7 +329,12 @@ section{
   border-radius: 25px;
 }
 
+
 /* #filters ul
 {
  
 } */
+
+.bodysearch{
+  background-color: #343634;
+}

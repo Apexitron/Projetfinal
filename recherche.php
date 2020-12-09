@@ -17,7 +17,12 @@ ini_set('display_errors', 1);
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 	</head>
-	<body>
+	<body class="bodysearch">
+	<div class="container-fluid">
+			  <div class="row">
+            <div class="col-sm-12 haut"></div>
+        </div>
+		
 		<?php //require ('header.php'); ?>
 		<input type="checkbox" id="check">
 		<label for="check">
@@ -25,7 +30,7 @@ ini_set('display_errors', 1);
 			<i class="fas fa-times" id="cancel"></i>
 		</label>
 		<!-- sidebar filtres -->
-			<i class="fas fa-bars" id="opfilter" onclick=openFilters()></i>
+			<i class="fas fa-angle-double-right" id="opfilter" onclick=openFilters()></i>
 			<i class="fas fa-times" id="clfilter" onclick= closeFilters()></i>
 				<div id="filters">
 					
@@ -43,12 +48,41 @@ ini_set('display_errors', 1);
 							<option value="rl" name="rl" id="rl"><label for="rl">Rocket League</label>
 							<option value="ssbm" name="ssbm" id="ssbm"><label for="ssbm">Super Smash Bros Melee</label>
 						</select>
-						
+							<h4>Horaires :</h4>
+						<select  name="jeu" id="jeu">	
+							<option value="any" name="any" id="any"><label for="any">Tout le temps</label>
+							<option value="eve" name="eve" id="eve"><label for="eve">Soirs de semaine</label>
+							<option value="we" name="we" id="we"><label for="we">Le w-e</label>
+<!-- 							<option value="ssbm" name="ssbm" id="ssbm"><label for="ssbm">Super Smash Bros Melee</label>
+ -->					</select>						
 				</div>	
 		
 			<div class="container-fluid reste">
 				<div class="row">
-				
+				<div class="col-10 col-xs-7 col-lg-5 mb-5 mx-auto rectjeu">
+                        <div class="col-8 text-center mx-auto mt-3"><h2>Nom du jeu</h2></div>
+                        <div class="col-8 text-center mx-auto mt-3"><p>Niveau de jeu de l'utilisateur</p></div>
+                        <div class="col-8 text-center mx-auto mt-3"><p>Nom d'utilisateur IG</p></div>
+                        <div class="col-8 text-center mx-auto mt-3"><p>Afficher horaires cochées pour le jeu</p></div>
+                  </div>
+				  <div class="col-10 col-xs-7 col-lg-5 mb-5 mx-auto rectjeu">
+                        <div class="col-8 text-center mx-auto mt-3"><h2>Nom du jeu</h2></div>
+                        <div class="col-8 text-center mx-auto mt-3"><p>Niveau de jeu de l'utilisateur</p></div>
+                        <div class="col-8 text-center mx-auto mt-3"><p>Nom d'utilisateur IG</p></div>
+                        <div class="col-8 text-center mx-auto mt-3"><p>Afficher horaires cochées pour le jeu</p></div>
+                  </div>
+				  <div class="col-10 col-xs-7 col-lg-5 mb-5 mx-auto rectjeu">
+                        <div class="col-8 text-center mx-auto mt-3"><h2>Nom du jeu</h2></div>
+                        <div class="col-8 text-center mx-auto mt-3"><p>Niveau de jeu de l'utilisateur</p></div>
+                        <div class="col-8 text-center mx-auto mt-3"><p>Nom d'utilisateur IG</p></div>
+                        <div class="col-8 text-center mx-auto mt-3"><p>Afficher horaires cochées pour le jeu</p></div>
+                  </div>
+				  <div class="col-10 col-xs-7 col-lg-5 mb-5 mx-auto rectjeu">
+                        <div class="col-8 text-center mx-auto mt-3"><h2>Nom du jeu</h2></div>
+                        <div class="col-8 text-center mx-auto mt-3"><p>Niveau de jeu de l'utilisateur</p></div>
+                        <div class="col-8 text-center mx-auto mt-3"><p>Nom d'utilisateur IG</p></div>
+                        <div class="col-8 text-center mx-auto mt-3"><p>Afficher horaires cochées pour le jeu</p></div>
+                  </div>
 				</div>	
 			</div>   
 			<script src="script.js"></script> 

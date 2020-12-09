@@ -26,7 +26,7 @@ ini_set('display_errors', 1);
         <style>@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');</style>
         <style>@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');</style>
 	</head>
-	<body>
+	<body class="bodyprof">
     <input type="checkbox" id="check">
     <label for="check">
       <i class="fas fa-bars" id="btn"></i>

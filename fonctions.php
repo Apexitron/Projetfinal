@@ -4,7 +4,7 @@ require 'Authentificate.php';
 
 //CHANGER LA PREMICE KRISS DE TABARNAC DE MARDE
 
-/* function aff_categorie($connex){
+ function aff_categorie($connex){
 
 	$req_count="SELECT COUNT(id_categorie) AS 'nb' FROM categorie_cosplay";
 	$res_count=$connex->prepare($req_count);
@@ -28,7 +28,7 @@ require 'Authentificate.php';
 	
 		echo $aff_sel;;
 		echo'</select></div>';
-	} */
+	} 
 	
 	function forbidden()
 	{
