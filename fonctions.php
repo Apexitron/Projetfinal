@@ -1,10 +1,10 @@
 <?php
 /* require 'appel_bdd.php'; */					//inser dans la BDD
-require 'Authentificate.php';
-
+/* require 'Authentificate.php';
+ */
 //CHANGER LA PREMICE KRISS DE TABARNAC DE MARDE
 
- function aff_categorie($connex){
+ /* function aff_categorie($connex){
 
 	$req_count="SELECT COUNT(id_categorie) AS 'nb' FROM categorie_cosplay";
 	$res_count=$connex->prepare($req_count);
@@ -28,8 +28,31 @@ require 'Authentificate.php';
 	
 		echo $aff_sel;;
 		echo'</select></div>';
-	} 
-	
+	}  */
+	//FONCTION NOUVEAU UTILISATEUR
+	function NewUser($cnx, $pseudo, $name, $firstname, $mail, $passwordd){	
+		/*              $date=new DateTime();
+		 */          /*   $req_ins="insert into user(pseudo_user, name_user, first_name_user, mail_user, password_user) VALUES (:pseudo_user, :name_user, :first_name_user, :mail_user, sha2(:password_user, 512))";
+						$res_ins=$cnx->prepare($req_ins);
+						$res_ins->execute(array(
+												'pseudo_user'=>$pseudo,
+												'name_user'=>$name,
+												'first_name_user'=>$firstname,
+												'mail_user'=>$mail,
+												'password_user'=>$password
+												));		*/
+/* 												$passwordd=password_hash($passwordd, PASSWORD_DEFAULT);
+ */												$req = $cnx->prepare('INSERT INTO user(pseudo_user, name_user, first_name_user, mail_user, password_user) VALUES (:pseudo_user, :name_user, :first_name_user, :mail_user, :password_user)');
+												$req->execute(array(
+													'pseudo_user'=>$pseudo,
+													'name_user'=>$name,
+													'first_name_user'=>$firstname,
+													'mail_user'=>$mail,
+													'password_user'=>$passwordd
+													));
+
+						}
+
 	function forbidden()
 	{
 	  echo "Vous devez être connecté.e pour accéder à cette page";
@@ -46,6 +69,19 @@ require 'Authentificate.php';
 	}
 
 	function Recherche()
+	{
+
+	}
+
+
+	/* $query = "SELECT username from my_table where username='bob'";
+$result = mysql_query($query);
+
+if(mysql_num_rows($result) > 0)
+{
+    // row exists. do whatever you would like to do.
+} */
+	function inserJeu()
 	{
 
 	}

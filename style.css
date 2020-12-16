@@ -3,7 +3,9 @@
   padding: 0;
 }
 
-
+.wrong{
+  z-index: -1;
+}
 /* ----------------------------- Style de la page de profil */
 
 .bodyprof{
@@ -38,6 +40,7 @@
   margin-top: 2%;
 }
 
+
 .title{
 	margin-bottom: 8%;
 }
@@ -47,7 +50,6 @@ input{
 }
 
 .sign-up{
-    border:1px solid black;
     padding: 10px 40px;
     margin-top: 10px;
     display:inline-block;
@@ -181,7 +183,7 @@ body {
 /*   height: 45vh;
  */  background: #042331;
   transition: all .5s ease;
-  z-index: 3;
+  z-index: 99;
   top: 100px;
 }
 .sidebar header {
@@ -337,4 +339,21 @@ section{
 
 .bodysearch{
   background-color: #343634;
+}
+
+/*Style  de la boite jeux joués du profil*/
+
+.played
+{
+  margin-left: 18px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  justify-content: space-around;
+}
+
+.playedform
+{
+  color: white;
 }

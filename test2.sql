@@ -7,13 +7,14 @@ id_user INT(5) NOT NULL AUTO_INCREMENT PRIMARY KEY,
 pseudo_user VARCHAR(50) NOT NULL,
 name_user VARCHAR(50) NOT NULL,
 first_name_user VARCHAR(50) NOT NULL,
+mail_user VARCHAR(50) NOT NULL,
 password_user varchar(255)
 );
 
 INSERT INTO user VALUES
-(1, "darkfufunaruto", "Gérard", "Jacques","jako"),
-(2, "palmito59", "Polik", "JacPierreques", "jako"),
-(3, "lightsoupier", "Ponss", "Soupière", "jako");
+(1, "darkfufunaruto", "Gérard", "Jacques","oui@gmail.com","jako"),
+(2, "palmito59", "Polik", "JacPierreques","non@gmail.com" ,"jako"),
+(3, "lightsoupier", "Ponss", "Soupière","raf@gmail.com" ,"jako");
 
 CREATE TABLE videogame
 (

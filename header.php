@@ -6,8 +6,8 @@
     <div class="sidebar">
     <header>Menu</header>
   <ul>
-<li><a href="#"><i class="fas fa-qrcode"></i>Profil</a></li>
-<li><a href="#"><i class="fas fa-link"></i>Recherche</a></li>
+<li><a href="profile.php"><i class="fas fa-qrcode"></i>Profil</a></li>
+<li><a href="recherche.php"><i class="fas fa-link"></i>Recherche</a></li>
 <li><a href="#"><i class="fas fa-stream"></i>Overview</a></li>
 <li><a href="#"><i class="fas fa-calendar-week"></i>Events</a></li>
 <li><a href="#"><i class="far fa-question-circle"></i>About</a></li>

@@ -2,6 +2,9 @@
 session_start();
 ini_set('display_errors', 1);
 require "Authentificate.php";
+require "fonctions.php";
+$conn=new Pdo_connexion();
+$cnx=$conn->LoadPdo();
 ?>
 <!DOCTYPE html>
  <html>
@@ -32,21 +35,23 @@ require "Authentificate.php";
 					<div class="col-sm-4 mx-auto text-center"><a id="sign-up" class="sign-up" href="#sign-up-popup">Pas de compte ? Inscrivez vous</a></div>
 					<div id="sign-up-popup" class="popup-overlay">
 						<div class="sign-up-form-container col-sm-8 text-center">
-							<form>
+							<form method="post" action="">
 								<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 								<h1>Inscription</h1>
 								<hr/>
+								<p>Pseudo</p>
+								<input type="text" name="pseudo"/>
 								<p>Nom</p>
-								<input type="text" />
+								<input type="text" name="name"/>
 								<p>Prénom</p>
-								<input type="text" />								
+								<input type="text" name="firstname" />								
 								<p>Adresse mail</p>
-								<input type="mail" />
+								<input type="mail" name="mail" />
 								<p>Mot de passe</p>
-								<input type="password"/>
+								<input type="password" name="inspassword"/>
 								<p>Confirmer le mot de passe</p>
-								<input type="password"/>
-								<input type="button" value="Sign Up" />
+								<input type="password" name="confirmpassword"/>
+								<input type="submit" value="Envoyer" name="Signup" />
 							</form>
 		
 						</div>
@@ -65,9 +70,34 @@ require "Authentificate.php";
 		</script>
 	</body>
  </html>
- <?php if(isset($_POST["login"], $_POST["password"]))
+ <?php 
+ 		if(isset($_POST["login"], $_POST["password"]))
  		{
 			 new Authentificate($_POST["login"], $_POST["password"]);
   			exit();	
+		}
+		
+		 if(isset($_POST["Signup"]))
+ 		{
+/* 			 $cnx=new Pdo_connexion();
+ */			 $pseudo=$_POST['pseudo'];
+			 $name=$_POST['name'];
+			 $firstname=$_POST['firstname'];
+			 $mail=$_POST['mail'];
+			 $password=$_POST['inspassword'];
+			 $confirmpassword=$_POST['confirmpassword'];
+				if($password===$confirmpassword)
+				{
+/* 					var_dump($cnx);
+ 				die();*/	
+					NewUser($cnx, $pseudo, $name, $firstname, $mail, $password);
+					echo "<p class='col-sm-10 text-center mx-auto wrong'>Compte créé, vous pouvez maintenant vous connecter</p>";
+					exit();		
+				} 
+  			
+		}
+		else
+		{
+			exit();	
 		}
 ?>

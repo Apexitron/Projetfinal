@@ -1,9 +1,15 @@
 <?php
+require 'fonctions.php';
 if(!isset($_SESSION)) 
 { 
 	session_start(); 
 } 
 ini_set('display_errors', 1);
+
+if (!isset($_SESSION["session"]))
+ {
+      forbidden();
+ }
 ?>
 <!DOCTYPE html>
  <html>
@@ -23,7 +29,7 @@ ini_set('display_errors', 1);
             <div class="col-sm-12 haut"></div>
         </div>
 		
-		<?php //require ('header.php'); ?>
+		<?php require ('header.php'); ?>
 		<input type="checkbox" id="check">
 		<label for="check">
 			<i class="fas fa-bars" id="btn"></i>

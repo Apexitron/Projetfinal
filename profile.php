@@ -18,8 +18,8 @@ ini_set('display_errors', 1);
 		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link href="style.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+		 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="script.js"></script>
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -72,6 +72,29 @@ ini_set('display_errors', 1);
                         <div class="col-8 text-center mx-auto mt-3"><p>Niveau de jeu de l'utilisateur</p></div>
                         <div class="col-8 text-center mx-auto mt-3"><p>Nom d'utilisateur IG</p></div>
                         <div class="col-8 text-center mx-auto mt-3"><p>Afficher horaires cochées pour le jeu</p></div>
+                  </div>
+                  <div class="col-8 mx-auto text-center">
+                        <form action="" method="POST" class="playedform">
+                        <h3>Jeux joués</h3>
+                        <div class="col-3 mx-auto text-center played">
+                              <h4>Jeux PC</h4>
+                              <input type="checkbox">Test</input>
+                              <input type="checkbox">Test</input>
+                              <input type="checkbox">Test</input>
+                        </div>
+                        <div class="col-3 mx-auto text-center played">
+                              <h4>Jeux Xbox</h4>
+                              <input type="checkbox">Test</input>
+                              <input type="checkbox">Test</input>
+                              <input type="checkbox">Test</input>
+                        </div> 
+                        <div class="col-3 mx-auto text-center played">
+                              <h4>Jeux PS4</h4>
+                              <input type="checkbox">Test</input>
+                              <input type="checkbox">Test</input>
+                              <input type="checkbox">Test</input>
+                        </div>       
+                        </form>
                   </div>       
             </div>
         </div>	

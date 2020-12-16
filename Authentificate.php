@@ -27,10 +27,10 @@ class Authentificate extends Pdo_connexion{
         $RES->execute(array(":login"=>$login, ":mdp"=>$password));
         if(!empty($RES)&&$RES->rowCount()==1){
             $id=$RES->fetch();
-            $this->Identification($id["id_user"], $id[""]);
+            $this->Identification($id["id_user"]/* , $id[""] */);
         }
         else{
-            echo "<div class='col-7 mx-auto text-center font-weight-bold mt-1'>Nom d'utilisateur ou mot de passe incorrect</div>";
+            echo "<div class='col-7 mx-auto text-center font-weight-bold mt-1 wrong'>Nom d'utilisateur ou mot de passe incorrect</div>";
         }
     }
 
@@ -47,6 +47,8 @@ class Authentificate extends Pdo_connexion{
         } 
         header('Location: profile.php');
     }
+
+    
 
     private function Deconnexion()
 	{
