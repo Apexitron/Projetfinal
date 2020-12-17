@@ -345,15 +345,23 @@ section{
 
 .played
 {
-  margin-left: 18px;
-  margin-right: 10px;
-  display: flex;
-  flex-direction: row;
+  margin: 50px;
+  /* margin-left: 18px;
+  margin-right: 10px; */
+  /*  /* display: flex;
+  flex-direction: row; 
   justify-items: center;
-  justify-content: space-around;
+  justify-content: space-around;  */
 }
 
 .playedform
 {
   color: white;
+  font-size: 1.3em;
 }
+
+.playedform input
+{
+  zoom: 1.5;
+}
+

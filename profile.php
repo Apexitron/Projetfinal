@@ -5,8 +5,9 @@ if(!isset($_SESSION))
 } 
 ini_set('display_errors', 1);
  include 'fonctions.php';
-/*  include 'Authentificate.php';
- */
+  inserJeuPC();
+  include 'Pdo_connexion.php';
+ 
  if (!isset($_SESSION["session"]))
  {
       forbidden();
@@ -75,25 +76,34 @@ ini_set('display_errors', 1);
                   </div>
                   <div class="col-8 mx-auto text-center">
                         <form action="" method="POST" class="playedform">
-                        <h3>Jeux joués</h3>
-                        <div class="col-3 mx-auto text-center played">
+                        <!-- <h3>Jeux joués</h3>
+                        <div class="col-10 col-offset-1 mx-auto text-center played ">
                               <h4>Jeux PC</h4>
-                              <input type="checkbox">Test</input>
-                              <input type="checkbox">Test</input>
-                              <input type="checkbox">Test</input>
+                              <input type="checkbox"></input>
+                              <label for="">test</label>
+                              <input type="checkbox"></input>
+                              <label for="">test</label>
+                              <input type="checkbox"></input>
+                              <label for="">test</label>
                         </div>
-                        <div class="col-3 mx-auto text-center played">
+                        <div class="col-10 col-offset-1 mx-auto text-center played">
                               <h4>Jeux Xbox</h4>
-                              <input type="checkbox">Test</input>
-                              <input type="checkbox">Test</input>
-                              <input type="checkbox">Test</input>
+                              <input type="checkbox"></input>
+                              <label for="">test</label>
+                              <input type="checkbox"></input>
+                              <label for="">test</label>
+                              <input type="checkbox"></input>
+                              <label for="">test</label>
                         </div> 
-                        <div class="col-3 mx-auto text-center played">
+                        <div class="col-10 col-offset-1 mx-auto text-center played">
                               <h4>Jeux PS4</h4>
-                              <input type="checkbox">Test</input>
-                              <input type="checkbox">Test</input>
-                              <input type="checkbox">Test</input>
-                        </div>       
+                              <input type="checkbox"></input>
+                              <label for="">test</label>
+                              <input type="checkbox"></input>
+                              <label for="">test</label>
+                              <input type="checkbox"></input>
+                              <label for="">test</label>
+                        </div>   -->     
                         </form>
                   </div>       
             </div>

@@ -81,8 +81,15 @@ if(mysql_num_rows($result) > 0)
 {
     // row exists. do whatever you would like to do.
 } */
-	function inserJeu()
+	function inserJeuPC()
 	{
+		$query = "SELECT platform_videogame from videogame where platform_videogame='PC'";
+		$result = $dbh->quote($query);
+		while(($row = mysql_fetch_assoc($result))) {
+/* 			$items[$row['id_customer']] = $row['name_customer']; */	
+							echo '<input type="checkbox"></input>
+                            <label for="">'.$row['name_videogame'].'</label>';
+	}
 
 	}
 ?>
