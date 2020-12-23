@@ -345,7 +345,7 @@ section{
 
 .played
 {
-  margin: 50px;
+  margin: 10px;
   /* margin-left: 18px;
   margin-right: 10px; */
   /*  /* display: flex;
@@ -357,11 +357,19 @@ section{
 .playedform
 {
   color: white;
-  font-size: 1.3em;
+  font-size: 1em;
+  margin-bottom: 25px;
 }
 
 .playedform input
 {
-  zoom: 1.5;
+  zoom: 1.2;
+}
+
+.playedform h4
+{
+  text-align: center;
+  margin-bottom: 25px;
+  margin-top: 25px;
 }
 

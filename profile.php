@@ -3,12 +3,14 @@ if(!isset($_SESSION))
 { 
     session_start(); 
 } 
+
 ini_set('display_errors', 1);
  include 'fonctions.php';
-  inserJeuPC();
-  include 'Pdo_connexion.php';
- 
- if (!isset($_SESSION["session"]))
+ include 'Pdo_connexion.php';
+ $conn=new Pdo_connexion();
+$cnx=$conn->LoadPdo();
+
+  if (!isset($_SESSION["session"]))
  {
       forbidden();
  }?>
@@ -34,13 +36,15 @@ ini_set('display_errors', 1);
       <i class="fas fa-times" id="cancel"></i>
     </label>
    <?php require ('header.php'); ?>
+
+
 		<div class="container-fluid">
 			  <div class="row">
             <div class="col-sm-12 haut"></div>
-        </div>
-        <div class="row">    
+                   </div>
+            <div class="row">    
             <div class="col-sm-12 reste">
-                  <!-- ajouter fonction pour changer la src selon l'utilisateur  -->
+                 <!-- ajouter fonction pour changer la src selon l'utilisateur  -->
                   <div class="col-sm-12 text-center "><img class="logoprof mx-auto" src="https://iutv.univ-paris13.fr/wp-content/uploads/logo-rond-twitter.png"></img></div>
                   <div class="col-sm-6 col-lg-8 text-center mx-auto name"><h1 class="profname">
                   <?php profName(); /* var_dump($_SESSION) */?>
@@ -74,37 +78,34 @@ ini_set('display_errors', 1);
                         <div class="col-8 text-center mx-auto mt-3"><p>Nom d'utilisateur IG</p></div>
                         <div class="col-8 text-center mx-auto mt-3"><p>Afficher horaires cochées pour le jeu</p></div>
                   </div>
-                  <div class="col-8 mx-auto text-center">
+                  
+                      
                         <form action="" method="POST" class="playedform">
-                        <!-- <h3>Jeux joués</h3>
-                        <div class="col-10 col-offset-1 mx-auto text-center played ">
-                              <h4>Jeux PC</h4>
-                              <input type="checkbox"></input>
-                              <label for="">test</label>
-                              <input type="checkbox"></input>
-                              <label for="">test</label>
-                              <input type="checkbox"></input>
-                              <label for="">test</label>
-                        </div>
-                        <div class="col-10 col-offset-1 mx-auto text-center played">
-                              <h4>Jeux Xbox</h4>
-                              <input type="checkbox"></input>
-                              <label for="">test</label>
-                              <input type="checkbox"></input>
-                              <label for="">test</label>
-                              <input type="checkbox"></input>
-                              <label for="">test</label>
-                        </div> 
-                        <div class="col-10 col-offset-1 mx-auto text-center played">
-                              <h4>Jeux PS4</h4>
-                              <input type="checkbox"></input>
-                              <label for="">test</label>
-                              <input type="checkbox"></input>
-                              <label for="">test</label>
-                              <input type="checkbox"></input>
-                              <label for="">test</label>
-                        </div>   -->     
+<!--                     <div class="row form-group">
+ -->                         
+<!--                         <div class="form-control  text-left played pl-0 pr-0 "> -->
+                              <h4>Jeux PC</h4>  
+
+                              <div class="row">
+                                    <?php  inserJeuPC($cnx); ?>
+                              
+                              <h4 class="col-8 mx-auto">Jeux PS4</h4> 
+                                    <?php  inserJeuPS4($cnx); ?>
+
+                                    <h4 class="col-8 mx-auto">Jeux Xbox One</h4> 
+                                    <?php  inserJeuXbox($cnx);  ?>
+
+                                    <h4 class="col-8 mx-auto">Jeux Switch</h4> 
+                                    <?php  inserJeuSwitch($cnx); ?>
+                              </div>
+                              <div class="row">
+                                    <input type="submit" value="update" class="mx-auto">
+                             
                         </form>
+
+                       
+ 
+                  </div></div>
                   </div>       
             </div>
         </div>	

@@ -81,15 +81,81 @@ if(mysql_num_rows($result) > 0)
 {
     // row exists. do whatever you would like to do.
 } */
-	function inserJeuPC()
+	function inserJeuPC($conn)
 	{
-		$query = "SELECT platform_videogame from videogame where platform_videogame='PC'";
-		$result = $dbh->quote($query);
-		while(($row = mysql_fetch_assoc($result))) {
-/* 			$items[$row['id_customer']] = $row['name_customer']; */	
-							echo '<input type="checkbox"></input>
-                            <label for="">'.$row['name_videogame'].'</label>';
-	}
+							
+			$sql="SELECT name_videogame from videogame where platform_videogame= :PC";
+			$stm = $conn->prepare($sql);
+			$stm->execute(array("PC"=>"PC"));
+/* 			var_dump($stm);
+			  $this->User = $RES->fetch();*/
+		
+ 			foreach($stm as $row)
+			{
+				echo '<div class="col-6"><input type="checkbox"></input>
+							<label for="">'.$row['name_videogame'].'</label></div>';										
+			}
+		
+				
 
 	}
+
+	function inserJeuPS4($conn)
+	{
+							
+			$sql="SELECT name_videogame from videogame where platform_videogame= :PS4";
+			$stm = $conn->prepare($sql);
+			$stm->execute(array("PS4"=>"PS4"));
+
+
+		foreach($stm as $row)
+			{
+			
+				echo '<div class="col-6"><input type="checkbox"></input>
+							<label for="">'.$row['name_videogame'].'</label></div>';
+								
+			}
+	echo("</div>");	
+
+	}
+
+	function inserJeuXbox($conn)
+	{
+							
+			$sql="SELECT name_videogame from videogame where platform_videogame= :Xbox";
+			$stm = $conn->prepare($sql);
+			$stm->execute(array("Xbox"=>"Xbox"));
+
+
+		foreach($stm as $row)
+			{
+			
+				echo '<div class="col-6"><input type="checkbox"></input>
+							<label for="">'.$row['name_videogame'].'</label></div>';
+								
+			}
+	echo("</div>");	
+
+	}
+
+	function inserJeuSwitch($conn)
+	{
+							
+			$sql="SELECT name_videogame from videogame where platform_videogame= :Switch";
+			$stm = $conn->prepare($sql);
+			$stm->execute(array("Switch"=>"Switch"));
+
+
+		foreach($stm as $row)
+			{
+			
+				echo '<div class="col-6"><input type="checkbox"></input>
+							<label for="">'.$row['name_videogame'].'</label></div>';
+								
+			}
+	echo("</div>");	
+
+	}
+ 
+	
 ?>

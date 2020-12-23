@@ -11,7 +11,7 @@ class Pdo_connexion{
         try{
             $dbh=new PDO("mysql:host=localhost;dbname=website;charset=utf8mb4", "root", "root");
             $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
-            // echo "<div'>ça marche</div>";
+             echo "<div'>ça marche</div>";
             return $dbh;
         }
 
