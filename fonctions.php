@@ -156,6 +156,27 @@ if(mysql_num_rows($result) > 0)
 	echo("</div>");	
 
 	}
+
+	function display($conn)
+	{
+
+			$game=$_POST['game'];					
+			$sql="SELECT name_user, level_user, name_game from videogame, user where game_name= :game";
+			$stm = $conn->prepare($sql);
+			$stm->execute(array("game"=>"game"));
+
+		foreach($stm as $row)
+			{
+			
+				echo '<div class="col-6">'.$row['name_user'].'</label></div><div class="col-6">'
+				.$row['level_user'].'</label></div><div class="col-6">'
+				.$row['name_game'].'</label></div>';
+								
+			}
+	echo("</div>");	
+
+	}
+
  
 	
 ?>

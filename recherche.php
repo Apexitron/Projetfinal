@@ -53,6 +53,7 @@ if (!isset($_SESSION["session"]))
 							<option value="cod" name="cod" id="cod"><label for="cod">Call of Duty : INSERER NOM DE JEU</label>
 							<option value="rl" name="rl" id="rl"><label for="rl">Rocket League</label>
 							<option value="ssbm" name="ssbm" id="ssbm"><label for="ssbm">Super Smash Bros Melee</label>
+							<option value="fort" name="fort" id="fort"><label for="fort">Fortnite</label>
 						</select>
 							<h4>Horaires :</h4>
 						<select  name="jeu" id="jeu">	
@@ -66,29 +67,35 @@ if (!isset($_SESSION["session"]))
 			<div class="container-fluid reste">
 				<div class="row">
 				<div class="col-10 col-xs-7 col-lg-5 mb-5 mx-auto rectjeu">
-                        <div class="col-8 text-center mx-auto mt-3"><h2>Nom du jeu</h2></div>
-                        <div class="col-8 text-center mx-auto mt-3"><p>Niveau de jeu de l'utilisateur</p></div>
-                        <div class="col-8 text-center mx-auto mt-3"><p>Nom d'utilisateur IG</p></div>
-                        <div class="col-8 text-center mx-auto mt-3"><p>Afficher horaires cochées pour le jeu</p></div>
-                  </div>
+                        <div class="col-8 text-center mx-auto mt-3"><h2>Carbozzaur</h2></div>
+                        <div class="col-8 text-center mx-auto mt-3"><p>Bon joueur</p></div>
+                        <div class="col-8 text-center mx-auto mt-3"><p>Fortnite(PC)</p></div>
+<!--                         <div class="col-8 text-center mx-auto mt-3"><p>Afficher horaires cochées pour le jeu</p></div>
+ -->                  </div>
 				  <div class="col-10 col-xs-7 col-lg-5 mb-5 mx-auto rectjeu">
-                        <div class="col-8 text-center mx-auto mt-3"><h2>Nom du jeu</h2></div>
-                        <div class="col-8 text-center mx-auto mt-3"><p>Niveau de jeu de l'utilisateur</p></div>
-                        <div class="col-8 text-center mx-auto mt-3"><p>Nom d'utilisateur IG</p></div>
-                        <div class="col-8 text-center mx-auto mt-3"><p>Afficher horaires cochées pour le jeu</p></div>
-                  </div>
+                        <div class="col-8 text-center mx-auto mt-3"><h2>Keeving</h2></div>
+                        <div class="col-8 text-center mx-auto mt-3"><p>Débutant</p></div>
+                        <div class="col-8 text-center mx-auto mt-3"><p>Fortnite(PC)</p></div>
+<!--                         <div class="col-8 text-center mx-auto mt-3"><p>Afficher horaires cochées pour le jeu</p></div>
+ -->                  </div>
 				  <div class="col-10 col-xs-7 col-lg-5 mb-5 mx-auto rectjeu">
-                        <div class="col-8 text-center mx-auto mt-3"><h2>Nom du jeu</h2></div>
-                        <div class="col-8 text-center mx-auto mt-3"><p>Niveau de jeu de l'utilisateur</p></div>
-                        <div class="col-8 text-center mx-auto mt-3"><p>Nom d'utilisateur IG</p></div>
-                        <div class="col-8 text-center mx-auto mt-3"><p>Afficher horaires cochées pour le jeu</p></div>
-                  </div>
+                        <div class="col-8 text-center mx-auto mt-3"><h2>Djumble</h2></div>
+                        <div class="col-8 text-center mx-auto mt-3"><p>Joueur de tournoi</p></div>
+                        <div class="col-8 text-center mx-auto mt-3"><p>Fortnite(PC)</p></div>
+<!--                         <div class="col-8 text-center mx-auto mt-3"><p>Afficher horaires cochées pour le jeu</p></div>
+ -->                  </div>
 				  <div class="col-10 col-xs-7 col-lg-5 mb-5 mx-auto rectjeu">
+                        <div class="col-8 text-center mx-auto mt-3"><h2>Rapolo</h2></div>
+                        <div class="col-8 text-center mx-auto mt-3"><p>Joueur intermédiaire</p></div>
+                        <div class="col-8 text-center mx-auto mt-3"><p>Fortnite(PC)</p></div>
+<!--                         <div class="col-8 text-center mx-auto mt-3"><p>Afficher horaires cochées pour le jeu</p></div>
+ -->                  </div>
+				  <!-- <div class="col-10 col-xs-7 col-lg-5 mb-5 mx-auto rectjeu">
                         <div class="col-8 text-center mx-auto mt-3"><h2>Nom du jeu</h2></div>
                         <div class="col-8 text-center mx-auto mt-3"><p>Niveau de jeu de l'utilisateur</p></div>
                         <div class="col-8 text-center mx-auto mt-3"><p>Nom d'utilisateur IG</p></div>
                         <div class="col-8 text-center mx-auto mt-3"><p>Afficher horaires cochées pour le jeu</p></div>
-                  </div>
+                  </div> -->
 				</div>	
 			</div>   
 			<script src="script.js"></script> 
